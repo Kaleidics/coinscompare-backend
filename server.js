@@ -8,7 +8,7 @@ const api = require('./api');
 app.use(express.json());
 app.use(
     cors({
-        origin: 'https://coinscompare.netlify.com/'
+        origin: 'https://coinscompare.netlify.com'
     })
 );
 
