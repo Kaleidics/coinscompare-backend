@@ -2,7 +2,7 @@ const axios = require('axios');
 
 const api = {
     fetchCoins: function () {
-        const searchUrl = `https://min-api.cryptocompare.com/data/top/mktcapfull?limit=100&tsym=USD&api_key=${process.env.API_KEY}`;
+        const searchUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false`;
         return axios.get(searchUrl)
             .then(response => response)
     }
