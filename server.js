@@ -19,6 +19,13 @@ app.get('/', (req, res) => {
     });
 });
 
+app.get('/:id', (req, res) => {
+    api.fetchOne(req.params.id).then(coin => {
+        console.log('heres the data:', coin.data);
+        res.json(coin.data);
+    });
+});
+
 app.listen(process.env.PORT || 8080, () => {
     console.log(`Your app is listening on port ${process.env.PORT || 8080}`);
 });
