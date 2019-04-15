@@ -26,7 +26,7 @@ app.get('/:id', (req, res) => {
     });
 });
 
-app.get('/:id/price_data', (req, res) => {
+app.get('/price_data/:id', (req, res) => {
     api.fetchOne(req.params.id).then(coin => {
         console.log('heres the data:', coin.data);
         res.json(coin.data);
