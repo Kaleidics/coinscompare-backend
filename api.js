@@ -12,7 +12,7 @@ const api = {
             .then(response => response)
     },
     fetchOne24: function(coinId) {
-        const searchUrl = `https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=1`;
+        const searchUrl = `https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=30`;
         return axios.get(searchUrl)
             .then(response => response)
     }
